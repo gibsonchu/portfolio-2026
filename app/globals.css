@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f4f2ee;
+  --paper-soft: #fbfaf7;
+  --ink: #1f211f;
+  --muted: #6f716b;
+  --line: #dedbd3;
+  --shadow: 0 26px 70px rgba(56, 55, 50, 0.14);
+}
+
+@theme {
+  --font-sans: "Inter", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 16% 12%, rgba(255, 255, 255, 0.72), transparent 28rem),
+    linear-gradient(135deg, #eeeeea 0%, var(--paper) 52%, #e7e5df 100%);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+
+::selection {
+  background: #d9d5c8;
+  color: var(--ink);
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.24em;
+}
+
+.portfolio-shell {
+  box-shadow: var(--shadow);
+}
+
+.soft-rule {
+  background: linear-gradient(90deg, transparent, rgba(31, 33, 31, 0.16), transparent);
+}
+
+.thumbnail-lines {
+  background-image:
+    linear-gradient(90deg, rgba(31, 33, 31, 0.09) 1px, transparent 1px),
+    linear-gradient(rgba(31, 33, 31, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
