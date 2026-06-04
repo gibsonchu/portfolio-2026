@@ -13,13 +13,13 @@ export default function Home() {
           <p>Selected works</p>
         </div>
 
-        <div className="relative mt-20 md:mt-[18vh] lg:mt-[19vh]">
+        <div className="relative mt-16 md:mt-[9vh] lg:mt-[8vh]">
           <ProjectGrid projects={projects} featured />
         </div>
 
         <div className="absolute bottom-8 left-10 right-5 sm:bottom-10 sm:left-16">
           <div>
-            <h1 className="text-5xl font-semibold leading-none text-stone-950 sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="text-5xl font-semibold leading-none text-stone-950 sm:text-6xl md:text-6xl lg:text-7xl">
               Gibson Chu
             </h1>
           </div>
