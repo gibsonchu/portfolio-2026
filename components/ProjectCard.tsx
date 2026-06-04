@@ -43,7 +43,7 @@ export function ProjectCard({ project, index, featured = false }: ProjectCardPro
           aria-label={`Open ${project.title}`}
           className={[
             "relative block overflow-hidden bg-white transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-800",
-            featured ? "h-[16.5rem] w-full md:h-[15rem] lg:h-[16.5rem]" : "h-full"
+            featured ? "aspect-[4/5.7] w-full" : "h-full"
           ].join(" ")}
         >
           <div className="absolute inset-0 grayscale saturate-0 transition duration-500 group-hover:scale-[1.02] group-hover:grayscale-0 group-hover:saturate-100">
@@ -57,9 +57,9 @@ export function ProjectCard({ project, index, featured = false }: ProjectCardPro
             {String(index + 1).padStart(2, "0")}
           </span>
         </a>
-        <div className="mt-4 text-left">
-          <p className="text-sm font-bold leading-tight text-stone-950">{project.title}</p>
-          <p className="mt-1 text-xs uppercase tracking-[0.14em] text-stone-500">{project.date}</p>
+        <div className="mt-3 text-left">
+          <p className="text-base font-bold leading-none text-stone-950">{project.title}</p>
+          <p className="mt-1 text-base leading-tight text-stone-600">{project.date}</p>
         </div>
       </div>
       {flyout ? (
