@@ -1,0 +1,5 @@
+clean-deploy-checkout/
+node_modules/
+.next/
+.git/
+preview-*.png
