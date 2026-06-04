@@ -5,7 +5,7 @@ import { Navigation } from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: {
-    default: "Gibson Chu Portfolio",
+    default: "Gibson Chu",
     template: "%s · Gibson Chu"
   },
   description:
