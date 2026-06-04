@@ -6,6 +6,7 @@ export type Project = {
   date: string;
   role: string;
   description: string;
+  image?: string;
   context: string;
   problem: string;
   approach: string;
@@ -111,13 +112,14 @@ export const projects: Project[] = [
     ]
   },
   {
-    slug: "neighborhood-value-capture",
-    title: "Neighborhood Value Capture",
+    slug: "quality-design-affordable-housing",
+    title: "Quality Design in Affordable Housing",
     category: "Housing / Urban Policy",
     year: "2026",
     date: "May 2026",
     role: "Policy research, analysis",
-    description: "A policy framework for linking neighborhood growth, land value, and equitable housing investment.",
+    description: "A visual and policy study of design quality in affordable housing.",
+    image: "/quality-design-affordable-housing.png",
     context: "Public action can create private land value, but cities often struggle to return that value to public priorities.",
     problem: "Value capture tools can become abstract, politically brittle, or disconnected from neighborhood-level trust.",
     approach: "Map policy tools against development context, resident benefits, governance models, and implementation risks.",
