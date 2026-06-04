@@ -42,7 +42,7 @@ export function ProjectCard({ project, index, featured = false }: ProjectCardPro
       aria-label={`Open ${project.title}`}
       className={[
         "group relative block overflow-hidden bg-white shadow-[0_12px_34px_rgba(67,64,58,0.10)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_46px_rgba(67,64,58,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-800",
-        featured ? "h-[15.5rem] w-full md:h-[18rem] md:min-w-[11rem] md:flex-[0_0_11rem] lg:h-[19rem] lg:min-w-[10.25rem] lg:flex-1" : "h-full"
+        featured ? "h-[15.5rem] w-full md:h-[16rem] md:min-w-[10.25rem] md:flex-[0_0_10.25rem] lg:h-[15rem] lg:min-w-[9.5rem] lg:flex-1" : "h-full"
       ].join(" ")}
     >
       <div className="absolute inset-0 opacity-50 saturate-[0.35] transition duration-500 group-hover:scale-[1.025] group-hover:opacity-95 group-hover:blur-[2px] group-hover:saturate-[0.85]">
