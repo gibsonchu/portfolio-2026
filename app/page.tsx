@@ -7,27 +7,21 @@ export default function Home() {
       <section className="portfolio-shell relative min-h-[calc(100vh-8rem)] overflow-hidden border border-stone-200/80 bg-[var(--paper-soft)] px-5 py-8 sm:px-10 lg:px-14">
         <div className="absolute bottom-0 left-7 top-0 w-px bg-stone-200" />
         <div className="absolute bottom-0 left-10 top-0 w-px bg-white" />
+        <div className="absolute bottom-0 left-0 top-0 w-7 bg-gradient-to-r from-stone-200/70 to-transparent" />
 
         <div className="relative flex justify-end text-xs uppercase tracking-[0.18em] text-stone-500">
           <p>Selected works</p>
         </div>
 
-        <div className="relative mt-20 md:mt-[12vh] lg:mt-[12vh]">
+        <div className="relative mt-20 md:mt-[18vh] lg:mt-[19vh]">
           <ProjectGrid projects={projects} featured />
         </div>
 
-        <div className="absolute bottom-6 left-10 right-5 grid items-end gap-6 sm:bottom-8 sm:left-16 md:grid-cols-[1fr_auto]">
+        <div className="absolute bottom-8 left-10 right-5 sm:bottom-10 sm:left-16">
           <div>
-            <h1 className="text-5xl font-semibold leading-none text-stone-950 sm:text-6xl md:text-7xl">
-              Portfolio
+            <h1 className="text-5xl font-semibold leading-none text-stone-950 sm:text-6xl md:text-7xl lg:text-8xl">
+              Gibson Chu
             </h1>
-            <p className="mt-12 text-base text-stone-500 sm:mt-16">2026</p>
-          </div>
-          <div className="text-left md:text-right">
-            <p className="text-base font-semibold text-stone-950">Gibson Chu</p>
-            <p className="mt-2 max-w-xs text-sm leading-6 text-stone-500 md:max-w-sm">
-              Urban Planner · Product Strategist · Civic Technologist
-            </p>
           </div>
         </div>
       </section>
