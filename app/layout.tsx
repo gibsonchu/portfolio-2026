@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navigation />
-        {children}
+        <div className="book-page-turn">{children}</div>
         <Footer />
       </body>
     </html>
