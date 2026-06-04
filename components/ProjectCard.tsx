@@ -35,43 +35,46 @@ export function ProjectCard({ project, index, featured = false }: ProjectCardPro
 
   return (
     <>
-    <a
-      ref={cardRef}
-      href={`/work/${project.slug}`}
-      onClick={openProject}
-      aria-label={`Open ${project.title}`}
-      className={[
-        "group relative block overflow-hidden bg-white shadow-[0_12px_34px_rgba(67,64,58,0.10)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_46px_rgba(67,64,58,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-800",
-        featured ? "h-[15.5rem] w-full md:h-[16rem] md:min-w-[10.25rem] md:flex-[0_0_10.25rem] lg:h-[15rem] lg:min-w-[9.5rem] lg:flex-1" : "h-full"
-      ].join(" ")}
-    >
-      <div className="absolute inset-0 opacity-50 saturate-[0.35] transition duration-500 group-hover:scale-[1.025] group-hover:opacity-95 group-hover:blur-[2px] group-hover:saturate-[0.85]">
-        <ProjectThumbnail project={project} index={index} />
-      </div>
-      <div className="absolute inset-0 bg-white/20 opacity-0 transition duration-500 group-hover:opacity-100" />
-      <div className="absolute inset-0 grid place-items-center bg-stone-950/18 px-4 text-center opacity-0 transition duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-        <div className="translate-y-2 transition duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0">
-          <p className="text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-white/76">{project.category}</p>
-          <h3 className="mt-3 text-xl font-semibold leading-tight text-white">{project.title}</h3>
+      <div className={featured ? "group" : "group h-full"}>
+        <a
+          ref={cardRef}
+          href={`/work/${project.slug}`}
+          onClick={openProject}
+          aria-label={`Open ${project.title}`}
+          className={[
+            "relative block overflow-hidden bg-white transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-800",
+            featured ? "h-[16.5rem] w-full md:h-[15rem] lg:h-[16.5rem]" : "h-full"
+          ].join(" ")}
+        >
+          <div className="absolute inset-0 grayscale saturate-0 transition duration-500 group-hover:scale-[1.02] group-hover:grayscale-0 group-hover:saturate-100">
+            <ProjectThumbnail project={project} index={index} />
+          </div>
+          <div className="absolute inset-0 bg-stone-950/0 opacity-0 transition duration-300 group-hover:bg-stone-950/16 group-hover:opacity-100 group-focus-within:bg-stone-950/16 group-focus-within:opacity-100" />
+          <div className="absolute inset-0 grid place-items-center px-4 text-center opacity-0 transition duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
+            <h3 className="text-xl font-semibold leading-tight text-white drop-shadow-sm">{project.title}</h3>
+          </div>
+          <span className="absolute left-4 top-4 text-xs font-semibold uppercase tracking-[0.18em] text-stone-700/55 transition group-hover:text-white/75">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        </a>
+        <div className="mt-4 text-left">
+          <p className="text-sm font-bold leading-tight text-stone-950">{project.title}</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.14em] text-stone-500">{project.date}</p>
         </div>
       </div>
-      <span className="absolute left-4 top-4 text-xs font-semibold uppercase tracking-[0.18em] text-stone-700/55 transition group-hover:text-white/75">
-        {String(index + 1).padStart(2, "0")}
-      </span>
-    </a>
-    {flyout ? (
-      <div
-        className="project-card-flyout fixed z-50 overflow-hidden bg-white shadow-[0_28px_90px_rgba(31,33,31,0.24)]"
-        style={{
-          left: flyout.left,
-          top: flyout.top,
-          width: flyout.width,
-          height: flyout.height
-        }}
-      >
-        <ProjectThumbnail project={project} index={index} />
-      </div>
-    ) : null}
+      {flyout ? (
+        <div
+          className="project-card-flyout fixed z-50 overflow-hidden bg-white"
+          style={{
+            left: flyout.left,
+            top: flyout.top,
+            width: flyout.width,
+            height: flyout.height
+          }}
+        >
+          <ProjectThumbnail project={project} index={index} />
+        </div>
+      ) : null}
     </>
   );
 }
