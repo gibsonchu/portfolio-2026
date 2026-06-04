@@ -9,7 +9,7 @@ type ProjectGridProps = {
 export function ProjectGrid({ projects, featured = false }: ProjectGridProps) {
   if (featured) {
     return (
-      <div className="grid gap-5 pb-8 pt-4 sm:grid-cols-2 md:grid-cols-5 md:gap-4 lg:gap-5">
+      <div className="grid gap-x-4 gap-y-8 pb-8 pt-4 sm:grid-cols-2 md:grid-cols-5 md:gap-x-4 lg:gap-x-5">
         {projects.slice(0, 5).map((project, index) => (
           <ProjectCard key={project.slug} project={project} index={index} featured />
         ))}
