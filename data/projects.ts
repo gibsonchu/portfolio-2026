@@ -3,6 +3,7 @@ export type Project = {
   title: string;
   category: string;
   year: string;
+  date: string;
   role: string;
   description: string;
   context: string;
@@ -26,6 +27,7 @@ export const projects: Project[] = [
     title: "FloodChat",
     category: "Civic Tech / Climate Resilience",
     year: "2026",
+    date: "January 2026",
     role: "Product strategy, research, prototyping",
     description: "A conversational civic tool for navigating neighborhood-scale flood risk and preparedness.",
     context: "Cities are asking residents to interpret increasingly complex flood data, emergency guidance, and infrastructure plans.",
@@ -47,6 +49,7 @@ export const projects: Project[] = [
     title: "Oonee Marketplace MVP",
     category: "Product Strategy / Micromobility",
     year: "2026",
+    date: "February 2026",
     role: "Marketplace strategy, MVP definition",
     description: "A product concept for connecting secure bike parking, riders, partners, and neighborhood mobility services.",
     context: "Micromobility infrastructure often succeeds when physical access, digital onboarding, and local partnerships move together.",
@@ -68,6 +71,7 @@ export const projects: Project[] = [
     title: "POPS Explorer",
     category: "Public Space / Urban Data",
     year: "2026",
+    date: "March 2026",
     role: "Urban data, interface design",
     description: "A public-space discovery and accountability interface for privately owned public spaces.",
     context: "POPS are distributed across the city but can be hard to discover, evaluate, or understand as a public network.",
@@ -89,6 +93,7 @@ export const projects: Project[] = [
     title: "Choking Hazard Signs",
     category: "Cultural Criticism / NYC Visual Culture",
     year: "2026",
+    date: "April 2026",
     role: "Visual research, writing",
     description: "A close reading of the signs, warnings, and visual systems that shape everyday attention in New York.",
     context: "The city communicates through informal signage as much as official policy, creating a dense language of caution and command.",
@@ -110,6 +115,7 @@ export const projects: Project[] = [
     title: "Neighborhood Value Capture",
     category: "Housing / Urban Policy",
     year: "2026",
+    date: "May 2026",
     role: "Policy research, analysis",
     description: "A policy framework for linking neighborhood growth, land value, and equitable housing investment.",
     context: "Public action can create private land value, but cities often struggle to return that value to public priorities.",
@@ -131,6 +137,7 @@ export const projects: Project[] = [
     title: "Cities Rewired",
     category: "Podcast / Urban Technology",
     year: "2026",
+    date: "June 2026",
     role: "Host, editor, narrative strategy",
     description: "A podcast about how technology changes the experience, governance, and imagination of cities.",
     context: "Urban technology is often discussed as procurement or infrastructure, but its human story is wider and stranger.",
@@ -152,6 +159,7 @@ export const projects: Project[] = [
     title: "IBX Transit-Oriented Development",
     category: "Research / Transportation",
     year: "2026",
+    date: "July 2026",
     role: "Research, planning analysis",
     description: "A transit-oriented development research study around the Interborough Express corridor.",
     context: "The IBX could reshape mobility and land-use conversations across Brooklyn and Queens.",
@@ -173,6 +181,7 @@ export const projects: Project[] = [
     title: "In Spaces Writing",
     category: "Essays / Urban Storytelling",
     year: "2026",
+    date: "August 2026",
     role: "Writer, editor",
     description: "Essays about cities, attention, public life, technology, housing, and the textures of urban change.",
     context: "Urban issues become more understandable when they are treated as lived stories, not only technical systems.",
