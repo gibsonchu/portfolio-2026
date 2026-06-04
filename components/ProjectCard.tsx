@@ -49,13 +49,6 @@ export function ProjectCard({ project, index, featured = false }: ProjectCardPro
           <div className="absolute inset-0 grayscale saturate-0 transition duration-500 group-hover:scale-[1.02] group-hover:grayscale-0 group-hover:saturate-100">
             <ProjectThumbnail project={project} index={index} />
           </div>
-          <div className="absolute inset-0 bg-stone-950/0 opacity-0 transition duration-300 group-hover:bg-stone-950/16 group-hover:opacity-100 group-focus-within:bg-stone-950/16 group-focus-within:opacity-100" />
-          <div className="absolute inset-0 grid place-items-center px-4 text-center opacity-0 transition duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
-            <h3 className="text-xl font-semibold leading-tight text-white drop-shadow-sm">{project.title}</h3>
-          </div>
-          <span className="absolute left-4 top-4 text-xs font-semibold uppercase tracking-[0.18em] text-stone-700/55 transition group-hover:text-white/75">
-            {String(index + 1).padStart(2, "0")}
-          </span>
         </a>
         <div className="mt-3 text-left">
           <p className="text-base font-bold leading-none text-stone-950">{project.title}</p>
