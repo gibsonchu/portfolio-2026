@@ -8,6 +8,14 @@ type ProjectThumbnailProps = {
 export function ProjectThumbnail({ project, index }: ProjectThumbnailProps) {
   const blockCount = 3 + (index % 3);
 
+  if (project.image) {
+    return (
+      <div className="relative h-full min-h-64 overflow-hidden bg-white" aria-hidden="true">
+        <img src={project.image} alt="" className="h-full w-full object-cover" />
+      </div>
+    );
+  }
+
   return (
     <div
       className="thumbnail-lines relative h-full min-h-64 overflow-hidden bg-stone-100"
