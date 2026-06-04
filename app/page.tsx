@@ -1,40 +1,33 @@
-import Link from "next/link";
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { projects } from "@/data/projects";
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-7xl px-5 pb-12 sm:px-8 lg:px-12">
-      <section className="portfolio-shell relative flex min-h-[calc(100vh-8rem)] flex-col overflow-hidden border border-stone-200/80 bg-[var(--paper-soft)] px-5 py-8 sm:px-10 lg:px-14">
-        <div className="absolute bottom-0 left-8 top-0 w-px bg-stone-200" />
-        <div className="absolute bottom-0 left-11 top-0 w-px bg-white" />
+    <main className="mx-auto w-full max-w-[92rem] px-4 pb-10 sm:px-8 lg:px-12">
+      <section className="portfolio-shell relative min-h-[calc(100vh-8rem)] overflow-hidden border border-stone-200/80 bg-[var(--paper-soft)] px-5 py-8 sm:px-10 lg:px-14">
+        <div className="absolute bottom-0 left-7 top-0 w-px bg-stone-200" />
+        <div className="absolute bottom-0 left-10 top-0 w-px bg-white" />
 
-        <div className="relative flex justify-between gap-6 text-xs uppercase tracking-[0.18em] text-stone-500">
+        <div className="relative flex justify-end text-xs uppercase tracking-[0.18em] text-stone-500">
           <p>Selected works</p>
-          <p>2026</p>
         </div>
 
-        <div className="relative order-2 mt-8 md:order-none md:mt-12 lg:mt-16">
+        <div className="relative mt-24 md:mt-[22vh] lg:mt-[26vh]">
           <ProjectGrid projects={projects} featured />
-          <div className="mt-1 flex justify-end text-sm text-stone-500">
-            <p>Urban systems, products, policy, and stories</p>
-          </div>
         </div>
 
-        <div className="relative order-1 mt-14 grid items-end gap-8 pb-2 md:order-none md:mt-8 md:grid-cols-[1fr_auto]">
+        <div className="absolute bottom-6 left-10 right-5 grid items-end gap-6 sm:bottom-8 sm:left-16 md:grid-cols-[1fr_auto]">
           <div>
-            <h1 className="text-6xl font-semibold leading-none text-stone-950 sm:text-7xl md:text-8xl">
+            <h1 className="text-5xl font-semibold leading-none text-stone-950 sm:text-6xl md:text-7xl">
               Portfolio
             </h1>
-            <p className="mt-7 max-w-2xl text-xl leading-8 text-stone-600">
-              Urban Planner · Product Strategist · Civic Technologist
-            </p>
+            <p className="mt-12 text-base text-stone-500 sm:mt-16">2026</p>
           </div>
           <div className="text-left md:text-right">
-            <p className="text-xl font-semibold text-stone-950">Gibson Chu</p>
-            <Link href="/work" className="mt-4 inline-block text-sm uppercase tracking-[0.16em] text-stone-500 hover:text-stone-950">
-              Enter work index
-            </Link>
+            <p className="text-base font-semibold text-stone-950">Gibson Chu</p>
+            <p className="mt-2 max-w-xs text-sm leading-6 text-stone-500 md:max-w-sm">
+              Urban Planner · Product Strategist · Civic Technologist
+            </p>
           </div>
         </div>
       </section>
