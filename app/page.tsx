@@ -12,7 +12,7 @@ export default function Home() {
           <p>Selected works</p>
         </div>
 
-        <div className="relative mt-24 md:mt-[22vh] lg:mt-[26vh]">
+        <div className="relative mt-20 md:mt-[14vh] lg:mt-[16vh]">
           <ProjectGrid projects={projects} featured />
         </div>
 
