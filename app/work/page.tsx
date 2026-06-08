@@ -11,7 +11,7 @@ export default function ProjectsPage() {
     <main>
       <PageHeader
         eyebrow="Projects"
-        title="Selected civic, product, and urban systems work."
+        title="Selected civic, product, and urban systems projects."
         description="A flexible index for planning research, product strategy, civic technology, mobility, public space, housing policy, cultural criticism, and storytelling."
       />
       <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8 lg:px-12">

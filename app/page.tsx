@@ -10,7 +10,7 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 top-0 w-7 bg-gradient-to-r from-stone-200/70 to-transparent" />
 
         <div className="relative flex justify-end text-xs uppercase tracking-[0.18em] text-stone-500">
-          <p>Selected works</p>
+          <p>Selected projects</p>
         </div>
 
         <div className="relative mt-16 md:mt-[9vh] lg:mt-[8vh]">
