@@ -29,14 +29,14 @@ function getAuthToken() {
   return process.env.GITHUB_CONTENT_TOKEN || process.env.GITHUB_TOKEN;
 }
 
+function getAdminPassword() {
+  return process.env.ADMIN_PASSWORD;
+}
+
 function checkPassword(password: string | null | undefined) {
-  const configured = process.env.ADMIN_PASSWORD;
+  const configured = getAdminPassword();
 
-  if (!configured) {
-    return true;
-  }
-
-  return password === configured;
+  return Boolean(configured && password === configured);
 }
 
 async function githubRequest<T>(path: string, init: RequestInit = {}): Promise<T> {
@@ -108,6 +108,10 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   const payload = (await request.json()) as SavePayload;
+
+  if (!getAdminPassword()) {
+    return NextResponse.json({ error: "Missing ADMIN_PASSWORD in Vercel." }, { status: 500 });
+  }
 
   if (!checkPassword(payload.password)) {
     return unauthorized();
