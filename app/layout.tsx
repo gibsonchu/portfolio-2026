@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Footer } from "@/components/Footer";
+import { ConditionalFooter } from "@/components/ConditionalFooter";
 import { Navigation } from "@/components/Navigation";
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
       <body>
         <Navigation />
         <div className="book-page-turn">{children}</div>
-        <Footer />
+        <ConditionalFooter />
       </body>
     </html>
   );

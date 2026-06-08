@@ -29,7 +29,7 @@ export function ProjectGrid({ projects, featured = false }: ProjectGridProps) {
   }
 
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-x-9 gap-y-16 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-12">
       {activeProjects.map((project, index) => (
         <article key={project.slug} className="min-h-[28rem]">
           <ProjectCard project={project} index={index} />

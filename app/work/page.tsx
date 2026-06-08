@@ -3,14 +3,14 @@ import { ProjectGrid } from "@/components/ProjectGrid";
 import { projects } from "@/data/projects";
 
 export const metadata = {
-  title: "Work"
+  title: "Projects"
 };
 
-export default function WorkPage() {
+export default function ProjectsPage() {
   return (
     <main>
       <PageHeader
-        eyebrow="Work"
+        eyebrow="Projects"
         title="Selected civic, product, and urban systems work."
         description="A flexible index for planning research, product strategy, civic technology, mobility, public space, housing policy, cultural criticism, and storytelling."
       />

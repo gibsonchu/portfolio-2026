@@ -151,6 +151,30 @@ a {
   background: #44403c;
 }
 
+.admin-save-button {
+  border: 2px solid #1c1917;
+  background: #1c1917;
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  min-height: 3.25rem;
+  padding: 1rem 1.35rem;
+  text-transform: uppercase;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.admin-save-button:hover:not(:disabled) {
+  background: #57534e;
+  border-color: #57534e;
+  transform: translateY(-1px);
+}
+
+.admin-save-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
 .admin-mini-button {
   padding: 0.5rem 0.58rem;
   font-size: 0.62rem;
