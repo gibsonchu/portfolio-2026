@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import content from './content.json';
 const markups = Object.fromEntries(Object.entries(content).map(([k,v]) => [k, {__html:v}]));
 const profileMarkup = markups.profile;
+// Keep trusted source markup mounted while the clock and hover preview update.
+// Replacing innerHTML during pointer movement can detach a clicked link.
+const StaticMarkup = React.memo(function StaticMarkup({ as: Tag = 'div', markup, className }) {
+  return <Tag className={className} dangerouslySetInnerHTML={markup} />;
+});
 
 function sizePage() {
   const w = document.documentElement.clientWidth, h = window.innerHeight;
@@ -60,8 +65,8 @@ export function App() {
   }
   return <div onClick={click} onPointerMove={move} onPointerLeave={() => setPreview(null)} onKeyDown={e => { if (e.target.matches('[data-zoom]') && ['Enter', ' '].includes(e.key)) {e.preventDefault(); setZoom(e.target.dataset.full || e.target.src);} }}>
     <time className="clock">{clock.toLocaleTimeString('en-GB', {hour12:false})}</time>
-    <main className="profile" dangerouslySetInnerHTML={profileMarkup} />
-    {panel && <aside className={`panel ${panel}`} aria-label={panel.replaceAll('-', ' ')}><div className="panel-content" dangerouslySetInnerHTML={markups[panel]} /></aside>}
+    <StaticMarkup as="main" className="profile" markup={profileMarkup} />
+    {panel && <aside className={`panel ${panel}`} aria-label={panel.replaceAll('-', ' ')}><StaticMarkup className="panel-content" markup={markups[panel]} /></aside>}
     {preview && <div className="hover-preview" style={{left:preview.x,top:preview.y,backgroundImage:`url("${preview.src}")`}} />}
     {zoom && <div className="zoom" role="dialog" aria-label="Enlarged photograph" aria-modal="true" onClick={e => {e.stopPropagation(); setZoom(null);}}><img src={zoom} alt="Shinkansen, Kyoto, Japan" /></div>}
   </div>;
