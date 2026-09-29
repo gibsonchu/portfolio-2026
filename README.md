@@ -1,8 +1,6 @@
-# Gibson Chu — local recreation
+# Gibson Chu Portfolio 2026
 
-Faithful frontend recreation of https://gibsonchu.com/, captured September 29, 2026.
-
-Built with React and Vite. Includes the profile, Selected Works and Information panels, organic-waste research article, live clock, hover previews, and image enlargement. All image/font assets are served locally; external links retain their original destinations.
+Built with React and Vite.
 
 ## Development
 
