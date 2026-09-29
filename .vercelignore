@@ -1,5 +1,5 @@
-clean-deploy-checkout/
-node_modules/
-.next/
 .git/
-preview-*.png
+node_modules/
+dist/
+evidence/
+design-qa.md
